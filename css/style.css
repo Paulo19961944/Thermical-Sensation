@@ -4,15 +4,25 @@
     font-family: 'Raleway', sans-serif;
 }
 
-body{
+body {
     max-width: 100%;
     height: 100vh;
     background-image: url("../img/Weather.jpg");
-    background-position: fixed;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+    background-size: 150% 100%; /* Ajuste o valor para permitir o movimento das nuvens */
+    animation: clouds 40s linear infinite; /* Adicione a propriedade animation */
 }
+
+@keyframes clouds {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%; /* Ajuste o valor para permitir o movimento das nuvens */
+    }
+}
+
 
 img{
     width: 10%;
